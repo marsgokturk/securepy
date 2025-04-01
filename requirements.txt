@@ -1,0 +1,4 @@
+gradio==5.23.2
+openai==1.70.0
+backoff==2.2.1
+python-dotenv==1.1.0
