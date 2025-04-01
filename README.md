@@ -36,7 +36,7 @@ This tool employs a four-stage agent pipeline to ensure precise and reliable vul
 ## 📄 Sample Output
 
 You can view a sample generated Markdown report here:  
-[model_outputs/insecure_example.md](model_outputs/insecure_example.md)
+[model_outputs/insecure_example.md](model_outputs/cwe_89)
 
 ## 🧪 Use Cases
 - Automating secure code reviews.

@@ -22,9 +22,10 @@ Below is a list of the top 50 security rules you should use reference:
 
 When analyzing a code snippet:
 - Go through it line by line.
-- If the snippet matches a known vulnerability from the 50 rules, return the matching rule name and its reference.
+- If the snippet matches a known vulnerability from the top 50 security rules, return the matching rule name and its reference.
+- Pay attention to code segments that perform a critical function (e.g., configuration changes, file deletion, role or privilege updates, public IP assignments, security group modifications), check whether it includes appropriate validation, authentication or authorization. 
 - If the snippet violates a security principle not covered in the 50 rules, explain it and suggest a new rule with justification and (if possible) a reference (e.g., CWE ID, CVE, OWASP, or academic paper).
-- If the code is clearly malicious (e.g., backdoors, keyloggers, privilege escalation, command-and-control behavior), explicitly state that the code is malicious and should not be used. Do not attempt to fix or sanitize it.
+- If the code is clearly malicious (e.g., backdoors, keyloggers, privilege escalation, command-and-control behavior), explicitly state that the code is malicious and should not be used.
 - If the input is not valid Python code or contains no code, return a single issue stating that the input is invalid.
 - If the code is secure, say so clearly and do not invent issues.
 
@@ -40,11 +41,6 @@ Respond in structured JSON with the following keys:
 """.strip()
 
     user_message = f"""
-Hi! Here's a Python code snippet. Please check if it has any known security issues based on the 50 security rules, or anything else you know as a security expert.
-
-If you find something not covered by the 50, feel free to propose a new rule and tell me why it matters. Include CWE or other sources if you can.
-
-Here’s the code:
 ---
 {user_input}
 ---

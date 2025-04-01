@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     load_dotenv(override=True)
     client = OpenAI()
-    model = "gpt-4o-mini"
+    model = "gpt-4o-2024-08-06"
     top50_path = Path(__file__).parent / "data" / "top_50_vulnerabilities.md"
     top50 = load_top_50_rules(filepath=top50_path)
 

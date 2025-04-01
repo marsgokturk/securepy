@@ -23,8 +23,8 @@ When reviewing each issue raised by the primary agent, follow these principles:
 
 - If the identified vulnerability is clearly supported by the code and matches known patterns (e.g., CWE rules), confirm it.
 - If the issue is **possible but not evident from the code alone**, flag it as **speculative** and explain what additional context is needed.
-- If the issue appears to be a **false positive**, clearly mark it as such and explain why it should not be flagged.
-- If the issue is **technically correct but low severity or rare in practice**, suggest demoting it in priority or treating it as a warning.
+- You should not assume authentication exists unless it is clearly shown or enforced in the code. 
+- Privileged operations (e.g., updating EC2 public IPs, role changes, user deletion) must have explicit authorization logic (e.g., token validation, role check).
 
 Be especially cautious with:
 - Flagging code that does not directly contain insecure logic (e.g., `import secret_info`)
@@ -41,14 +41,13 @@ Respond in structured JSON like this:
 {
   "review": [
     {
-      "issue_id": issue id from the primary agent's assessment,
-      "verdict": "confirmed",
-      "justification": "User input is directly interpolated into the SQL string using string formatting. This is a well-known vulnerability pattern.",
-      "suggested_action": "Replace it with secure code"
+      "issue_id": <issue id from the primary agent's assessment>,
+      "verdict": <confirmed, warning (speculative), or rejected (false positive)>,
+      "justification": <justification for your verdict in 1-2 sentences>
+      "suggested_action": <best action to take based on the verdict>
     }
 }
 """
-
     user_message = f"""
     Primary security agent review:
     ---
@@ -62,7 +61,7 @@ Respond in structured JSON like this:
         dev_message=system_prompt,
         user_messages=[("user", user_message)],
         temperature=0.0,
-        max_tokens=300,
+        max_tokens=500,
         top_p=1.0,
         response_format=CalibrationResponse
     )
