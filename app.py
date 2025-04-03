@@ -36,4 +36,4 @@ with gr.Blocks() as demo:
     code_file_dropdown.change(fn=load_code_only, inputs=code_file_dropdown, outputs=[code_display, output_header, code_output])
     scan_button.click(fn=load_output_only, inputs=code_file_dropdown, outputs=[output_header, code_output])
 
-demo.launch(share=False)
+demo.launch(share=True)
