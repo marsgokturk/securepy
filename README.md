@@ -15,13 +15,14 @@ pinned: true
 
 This project explores how LLMs can be safely and reliably used for automated code security auditing. It addresses real-world challenges in secure software development by simulating a reasoning pipeline designed to identify and correct insecure code.
 
-## 🚀 Features
+## 🔍 Try it out
 
-- Upload or paste Python code into a user-friendly Gradio interface.
-- Automatically scans for known and emerging security issues.
-- Calibrates results to minimize false positives.
-- Suggests secure alternatives for identified vulnerabilities.
-- Generates a structured Markdown report summarizing findings and recommendations.
+Try SecurePy instantly in your browser:  
+[**🔗 Launch the Hugging Face Demo**](https://huggingface.co/spaces/marz1/securepy-demo)
+- Select from preloaded Python code samples representative of common security flaws.
+- Trigger the vulnerability detection pipeline using the "Scan for Vulnerabilities" button.
+- Review structured Markdown reports that summarize detected vulnerabilities, CWE mappings, and remediation suggestions.
+- Clone and run locally to experiment with your own files or extend the agent pipeline.
 
 ## 🧠 Agent Pipeline Overview
 
@@ -41,10 +42,14 @@ This tool employs a four-stage agent pipeline to ensure precise and reliable vul
 - Suggests secure, developer-friendly code fixes.
 - Outputs a Markdown report with rationale and CWE references.
 
-## 📄 Sample Output
+## 🔗Gradio App Access
+A hosted Gradio demo is publicly available and includes curated sample Python files with pre-generated security reports. The hoster version does not make live OpenAI calls.
+To experiment with your own Python code and enable live model inference:
+- Upload them to the `code_samples/` directory.
+- Add your OpenAI API key to a `.env` file at the project root.
 
-You can view a sample generated Markdown report here:  
-[model_outputs/cwe_89.md](model_outputs/cwe_89.md)
+- The output will be written in Markdown format to the `model_outputs/` directory. Each file will be named after the corresponding input `.py` file.
+this configuration enables the full agent pipeline with real-time LLM reasoning.
 
 ## 🧪 Use Cases
 - Automating secure code reviews.
@@ -55,18 +60,6 @@ You can view a sample generated Markdown report here:
 - OpenAI GPT
 - Gradio
 - Markdown reporting
-
-## 🔗 Gradio App Access
-
-A public Gradio demo will be available soon. It includes several sample Python files and pre-generated security reports for demonstration purposes. The hosted version does not make live OpenAI API calls.
-
-If you wish to experiment with your own Python files:
-- Upload them to the `code_samples/` directory.
-- Add your OpenAI API key to a `.env` file at the project root.
-- Run the `run.py` script.
-- The output will be written in Markdown format to the `model_outputs/` directory. Each file will be named after the corresponding input `.py` file.
-
-This setup allows you to run the full agent pipeline locally with live model calls.
 
 ## 📂 Folder Structure
 
