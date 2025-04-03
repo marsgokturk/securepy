@@ -2,7 +2,6 @@ from pathlib import Path
 
 import gradio as gr
 
-
 test_files_dir = Path("code_samples")
 output_dir = Path("model_outputs")
 default_file = next(test_files_dir.glob("*.py"), None)
@@ -13,13 +12,15 @@ with gr.Blocks() as demo:
     code_file_dropdown = gr.Dropdown(
         choices=[f.name for f in test_files_dir.glob("*.py")],
         value=default_file.name if default_file else None,
-        label="Select a sample Python code to be scanned",
+        label="Select a sample Python code to be scanned for vulnerabilities",
         interactive=True
     )
 
-    code_display = gr.Code(label="Source Code", lines=20, interactive=False, language="python")
-    output_header = gr.Markdown("## 🧠 Model Output")
-    code_output = gr.Markdown()
+    with gr.Row():
+        code_display = gr.Code(label="Source Code", lines=20, interactive=False, language="python")
+        with gr.Column():
+            output_header = gr.Markdown("## 🧠 Model Output")
+            code_output = gr.Markdown()
 
     def load_code_and_output(file_name):
         code_content = (test_files_dir / file_name).read_text(encoding="utf-8")
