@@ -17,16 +17,23 @@ with gr.Blocks() as demo:
     )
 
     with gr.Row():
-        code_display = gr.Code(label="Source Code", lines=20, interactive=False, language="python")
+        with gr.Column():
+            code_display = gr.Code(label="Source Code", lines=20, interactive=False, language="python")
+            code_display.value = (test_files_dir / default_file.name).read_text(encoding="utf-8") if default_file else ""
+            scan_button = gr.Button("🔍 Scan for Vulnerabilities")
         with gr.Column():
             output_header = gr.Markdown("## 🧠 Model Output")
             code_output = gr.Markdown()
 
-    def load_code_and_output(file_name):
+    def load_code_only(file_name):
         code_content = (test_files_dir / file_name).read_text(encoding="utf-8")
+        return code_content, "## 🧠 Model Output", "Click **Scan for Vulnerabilities** to see the results."
+
+    def load_output_only(file_name):
         output_content = (output_dir / file_name.replace(".py", ".md")).read_text(encoding="utf-8")
-        return code_content, "## 🧠 Model Output", output_content
+        return "## 🧠 Model Output", output_content
 
-    code_file_dropdown.change(fn=load_code_and_output, inputs=code_file_dropdown, outputs=[code_display, output_header, code_output])
+    code_file_dropdown.change(fn=load_code_only, inputs=code_file_dropdown, outputs=[code_display, output_header, code_output])
+    scan_button.click(fn=load_output_only, inputs=code_file_dropdown, outputs=[output_header, code_output])
 
-demo.launch()
+demo.launch(share=False)
