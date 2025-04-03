@@ -1,3 +1,14 @@
+---
+title: SecurePy
+emoji: 🛡️
+colorFrom: gray
+colorTo: blue
+sdk: gradio
+sdk_version: "5.23.2"
+app_file: app.py
+pinned: true
+---
+
 # 🔐 SecurePy: Agent-Based Python Code Vulnerability Scanner
 
 **SecurePy** is an experimental tool that uses a multi-agent system to analyze Python code for security vulnerabilities and generate actionable reports. By integrating LLM-based reasoning with curated security knowledge, it performs thorough and systematic code reviews.
