@@ -4,8 +4,6 @@
 
 This project explores how LLMs can be safely and reliably used for automated code security auditing. It addresses real-world challenges in secure software development by simulating a reasoning pipeline designed to identify and correct insecure code.
 
----
-
 ## 🚀 Features
 
 - Upload or paste Python code into a user-friendly Gradio interface.
@@ -13,7 +11,6 @@ This project explores how LLMs can be safely and reliably used for automated cod
 - Calibrates results to minimize false positives.
 - Suggests secure alternatives for identified vulnerabilities.
 - Generates a structured Markdown report summarizing findings and recommendations.
----
 
 ## 🧠 Agent Pipeline Overview
 
