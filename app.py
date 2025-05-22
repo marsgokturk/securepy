@@ -2,8 +2,8 @@ from pathlib import Path
 
 import gradio as gr
 
-test_files_dir = Path("code_samples")
-output_dir = Path("model_outputs")
+test_files_dir = Path("demo/inputs")
+output_dir = Path("demo/outputs")
 default_file = next(test_files_dir.glob("*.py"), None)
 
 with gr.Blocks() as demo:

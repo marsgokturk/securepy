@@ -1,0 +1,384 @@
+{
+  "cwe_22_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-22"
+  },
+  "cwe_1336_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-1336"
+  },
+  "cwe_601_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-601"
+  },
+  "insecure_logging_vuln_snippet.py": {
+    "secure": false,
+    "cwe": null
+  },
+  "cwe_532_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-532"
+  },
+  "cwe_209_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-209"
+  },
+  "bandit_b104_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "BANDIT-B104"
+  },
+
+  "no_sql_injection_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-943"
+  },
+  "bandit_b321_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "BANDIT-B321"
+  },
+
+  "cwe_306_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-306"
+  },
+
+  "bandit_b401_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "BANDIT-B401"
+  },
+  "debug_mode_vuln_snippet.py": {
+    "secure": false,
+    "cwe": null
+  },
+
+  "cve_2017_18342_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CVE-2017-18342"
+  },
+
+  "bandit_b101_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "BANDIT-B101"
+  },
+
+  "semgrep_listen_eval_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "SEMGREP-LISTEN-EVAL"
+  },
+
+  "cwe_521_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-521"
+  },
+
+  "cwe_489_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-489"
+  },
+  "binding_network_vuln_snippet.py": {
+    "secure": false,
+    "cwe": null
+  },
+  "telnet_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "Bandit B401"
+  },
+  "cwe_295_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-295"
+  },
+  "trojan_vuln_snippet.py": {
+    "secure": false,
+    "cwe": null
+  },
+  "cwe_611_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE611"
+  },
+
+  "cwe_94_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-94"
+  },
+  "cwe_915_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-915"
+  },
+  "cwe_335_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-335"
+  },
+  "depr_ssl_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "DEPRECATED-PROTOCOLS"
+  },
+
+  "cwe_434_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-434"
+  },
+  "cwe_1004_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-1004"
+  },
+
+  "cwe_319_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-319"
+  },
+  "cwe_943_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-943"
+  },
+  "cwe_759_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-759"
+  },
+  "cwe_321_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-321"
+  },
+  "cwe_918_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-918"
+  },
+  "cwe_613_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-613"
+  },
+  "cwe_338_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-338"
+  },
+  "cwe_78_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-78"
+  },
+  "cwe_862_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-862"
+  },
+  "cwe_287_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-287"
+  },
+  "cwe_377_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-377"
+  },
+  "cwe_614_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-614"
+  },
+  "cwe_345_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-345"
+  },
+  "cwe_326_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-326"
+  },
+  "cwe_502_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-502"
+  },
+  "cwe_20_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-20"
+  },
+  "cwe_863_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-863"
+  },
+  "cwe_352_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-352"
+  },
+  "cwe_90_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-90"
+  },
+  "cwe_113_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-113"
+  },
+  "cwe_327_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-327"
+  },
+  "cwe_89_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-89"
+  },
+  "cwe_798_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-798"
+  },
+  "cwe_276_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-276"
+  },
+
+  "cwe_79_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-79"
+  },
+  "cwe_1241_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-1241"
+  },
+  "cwe_1333_vuln_snippet.py": {
+    "secure": false,
+    "cwe": "CWE-1333"
+  },
+  "cwe_345_fixed.py": {
+    "secure": true
+  },
+  "cwe_611_fixed.py": {
+    "secure": true
+  },
+  "cwe_20_fixed.py": {
+    "secure": true
+  },
+  "cwe_943_fixed.py": {
+    "secure": true
+  },
+  "cwe_306_fixed.py": {
+    "secure": true
+  },
+  "cwe_434_fixed.py": {
+    "secure": true
+  },
+  "cwe_338_fixed.py": {
+    "secure": true
+  },
+  "cwe_502_fixed.py": {
+    "secure": true
+  },
+  "debug_mode_fixed.py": {
+    "secure": true
+  },
+  "cwe_352_fixed.py": {
+    "secure": true
+  },
+  "cwe_863_fixed.py": {
+    "secure": true
+  },
+  "cwe_862_fixed.py": {
+    "secure": true
+  },
+  "cwe_1336_fixed.py": {
+    "secure": true
+  },
+  "insecure_cipher_fixed.py": {
+    "secure": true
+  },
+  "cwe_90_fixed.py": {
+    "secure": true
+  },
+  "cwe_601_fixed.py": {
+    "secure": true
+  },
+  "cwe_287_fixed.py": {
+    "secure": true
+  },
+  "cwe_78_fixed.py": {
+    "secure": true
+  },
+  "cwe_79_fixed.py": {
+    "secure": true
+  },
+  "binding_network_fixed.py": {
+    "secure": true
+  },
+  "cwe_335_fixed.py": {
+    "secure": true
+  },
+  "cwe_209_fixed.py": {
+    "secure": true
+  },
+  "cwe_377_fixed.py": {
+    "secure": true
+  },
+  "telnet_fixed.py": {
+    "secure": true
+  },
+  "insecure_logging_fixed.py": {
+    "secure": true
+  },
+  "cwe_915_fixed.py": {
+    "secure": true
+  },
+  "insecure_assert_fixed.py": {
+    "secure": true
+  },
+  "cwe_1241_fixed.py": {
+    "secure": true
+  },
+  "cwe_319_fixed.py": {
+    "secure": true
+  },
+  "cwe_327_fixed.py": {
+    "secure": true
+  },
+  "cwe_326_fixed.py": {
+    "secure": true
+  },
+  "cwe_759_fixed.py": {
+    "secure": true
+  },
+  "cwe_295_fixed.py": {
+    "secure": true
+  },
+  "cwe_1004_fixed.py": {
+    "secure": true
+  },
+  "ftp_fixed.py": {
+    "secure": true
+  },
+  "cwe_613_fixed.py": {
+    "secure": true
+  },
+  "cwe_22_fixed.py": {
+    "secure": true
+  },
+  "depr_ssl_fixed.py": {
+    "secure": true
+  },
+  "cwe_113_fixed.py": {
+    "secure": true
+  },
+  "cwe_89_fixed.py": {
+    "secure": true
+  },
+  "cwe_532_fixed.py": {
+    "secure": true
+  },
+  "cwe_614_fixed.py": {
+    "secure": true
+  },
+  "no_sql_injection_fixed.py": {
+    "secure": true
+  },
+  "cwe_276_fixed.py": {
+    "secure": true
+  },
+  "cwe_94_fixed.py": {
+    "secure": true
+  },
+  "cwe_1333_fixed.py": {
+    "secure": true
+  },
+  "unsafe_yaml_load_fixed.py": {
+    "secure": true
+  },
+  "cwe_798_fixed.py": {
+    "secure": true
+  },
+  "cwe_918_fixed.py": {
+    "secure": true
+  },
+  "cwe_321_fixed.py": {
+    "secure": true
+  }
+}

@@ -2,10 +2,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from agents.code_analyzer import analyze_code
-from agents.input_guardrail import input_guardrail
-from agents.response_calibration_agent import review_security_response, process_review
-from agents.vuln_fixer import suggest_secure_fixes
+from pipeline.code_analyzer import analyze_code
+from pipeline.input_guardrail import input_guardrail
+from pipeline.response_calibration_agent import review_security_response, process_review
+from pipeline.vuln_fixer import suggest_secure_fixes
 from schemas.analysis import CodeAnalysisResponse, CalibrationResponse, CalibratedCodeAnalysisResponse
 from schemas.fix import InsecureCodeFixResponse
 from utils import load_top_50_rules, format_result_to_markdown
@@ -34,7 +34,7 @@ def run(openai_client, code_snippet, model, top50_rules):
         }
 
     # 3. Calibrate the analysis
-    calibration_response:CalibrationResponse = review_security_response(openai_client=openai_client, model=model, code_analysis=code_analysis)
+    calibration_response:CalibrationResponse = review_security_response(openai_client=openai_client, model=model, code=code_snippet, code_analysis=code_analysis, top_50_descriptions=top50_rules)
     calibrated_analysis:CalibratedCodeAnalysisResponse = process_review(code_analysis=code_analysis, calibration_response=calibration_response)
     if calibrated_analysis.secure:
         return {
@@ -71,11 +71,11 @@ if __name__ == "__main__":
     top50_path = Path(__file__).parent / "data" / "top_50_vulnerabilities.md"
     top50 = load_top_50_rules(filepath=top50_path)
 
-    test_files_dir = Path("code_samples")
-    output_dir = Path("model_outputs")
+    demo_files_dir = Path("demo/inputs")
+    output_dir = Path("demo/outputs")
     output_dir.mkdir(exist_ok=True)
 
-    for filepath in test_files_dir.glob("*.py"):
+    for filepath in demo_files_dir.glob("*.py"):
         filename = filepath.name.replace(".py", "")
         result: dict = test_with_code_file(str(filepath), label=filename, openai_client=client, model=model, top50_rules=top50)
         print(result)

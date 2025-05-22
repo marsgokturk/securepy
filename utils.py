@@ -3,9 +3,15 @@ import json
 from schemas.fix import InsecureCodeFixResponse, CodeFix
 
 
+def load_top_50_cwes(filepath="cwes.txt") -> str:
+    with open(filepath, "r", encoding="utf-8") as f:
+        cwe_ids = {line.strip().upper() for line in f if line.strip()}
+    return cwe_ids
+
 def load_top_50_rules(filepath="top_50_vulnerabilities.md") -> str:
     with open(filepath, "r", encoding="utf-8") as f:
-        return f.read()
+        content = f.read()
+    return content
 
 def openai_chat(client,
                 model:str,
